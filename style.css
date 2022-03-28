@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #121212;
+	height: 100vh;
+	display: grid;
+	grid-template-areas:
+		'header'
+		'content'
+		'footer';
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 10vh;
+}
+
+header,
+main,
+footer {
+	background-color: rgb(182, 202, 230);
+}
+
+header {
+	grid-area: header;
+}
+
+main {
+	grid-area: content;
+}
+
+footer {
+	grid-area: footer;
+}
+
+.container {
+	max-width: 1440px;
+	margin: 1.5rem auto;
+}
+
+.header {
+	background-color: rgb(117, 136, 163);
+}
+
+.header .logo {
+	background-color: rgb(18, 50, 95);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	width: 10rem;
+	margin-left: 1.5rem;
+}
+
+.header .logo a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+
+.header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar__nav {
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar__nav li {
+	flex: 1;
+	margin-right: 0.5rem;
+}
+
+.navbar__nav li:last-child {
+	margin-right: 1.5rem;
+}
+
+.navbar__nav a {
+	text-decoration: none;
+	background-color: transparent;
+	color: rgb(18, 50, 95);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	border: 2px solid rgb(18, 50, 95);
+	border-radius: 0.25rem;
+	width: 10rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.navbar__nav a:hover {
+	background-color: rgb(18, 50, 95);
+	border-style: transparent;
+	color: #fff;
+}
+
+.footer {
+	background-color: rgb(117, 136, 163);
+}
+
+.footer p {
+	text-align: center;
+	color: #fff;
+}
+
+@media (max-width: 768px) {
+	.header .container,
+	.navbar__nav {
+		flex-direction: column;
+		margin: 0;
+	}
+
+	.header .logo {
+		margin: 1.5rem 0 0.5rem;
+	}
+
+	.header .navbar__nav li {
+		margin: 0 0 0.5rem;
+	}
+}
